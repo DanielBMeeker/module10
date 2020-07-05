@@ -15,6 +15,16 @@ class Employee:
     # Constructor
     def __init__(self, last_name, first_name, address,
                  phone_number, salaried, start_date, salary):
+        """
+        Constructor for the Employee class
+        :param last_name: string
+        :param first_name: string
+        :param address: string
+        :param phone_number: string
+        :param salaried: boolean
+        :param start_date: datetime
+        :param salary: float
+        """
         self._last_name = last_name
         self._first_name = first_name
         self._address = address
