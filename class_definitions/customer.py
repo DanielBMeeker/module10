@@ -6,6 +6,8 @@ Date: 7/5/2020
 This program defines a customer class with a constructor and 3 methods:
 str, repr, and display.
 """
+
+
 class Customer:
     """
     Customer Class
@@ -42,8 +44,8 @@ class Customer:
         overrides built-in function
         :return: a string that mimics the constructor.
         """
-        return ("{self.__class__.__name__}({self.customer_id}, {self.last_name}, "
-                "{self.first_name}, '{self.address}', {self.phone_number})".format(self=self))
+        return ("{self.__class__.__name__}({self.customer_id}, '{self.last_name}', "
+                "'{self.first_name}', '{self.address}', '{self.phone_number}')".format(self=self))
 
     def display(self):
         """
