@@ -122,9 +122,9 @@ class Employee:
         Overrides the built-in repr function.
         :return: a string that contains all the information needed to recreate the object
         """
-        return ('{self.__class__.__name__}({self.last_name}, '
-                '{self.first_name}, {self.address}, {self.phone_number}, '
-                '{self.salaried}, {self.start_date}, {self.salary})'.format(self=self))
+        return ("{self.__class__.__name__}({self.last_name}, "
+                "{self.first_name}, '{self.address}', {self.phone_number}, "
+                "{self.salaried}, {self.start_date}, {self.salary})".format(self=self))
 
 
 # Driver
