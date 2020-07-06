@@ -1,3 +1,12 @@
+"""
+Program: student.py
+Author: Skeleton of Student provided by instructor - validations by Daniel Meeker
+Date: 7/5/2020
+
+This program creates a Student class for use in unit testing in test_student.py
+"""
+
+
 class Student:
     """Student class"""
     def __init__(self, lname, fname, major, gpa=0.0):

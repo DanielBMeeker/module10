@@ -1,3 +1,10 @@
+"""
+Program: test_student.py
+Author: Daniel Meeker
+Date: 7/5/2020
+
+This file contains unittests for the student class.
+"""
 import unittest
 from class_definitions import student as s
 
