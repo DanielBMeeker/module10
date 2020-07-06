@@ -9,13 +9,12 @@ class MyTestCase(unittest.TestCase):
     def tearDown(self):
         del self.student
 
-    def test_initial_value_required_attributes(self):
+    def test_object_created_required_attributes(self):
         self.assertEqual(self.student.last_name, 'Meeker')
         self.assertEqual(self.student.first_name, 'Daniel')
         self.assertEqual(self.student.major, 'BIS-OOP')
-        self.assertEqual(self.student.gpa, 3.9)
 
-    def test_inital_all_attributes(self):
+    def test_object_created_all_attributes(self):
         student = s.Student('Meeker', 'Daniel', 'BIS-OOP', 3.9) # this is not self.person from setUp, but local
         assert student.last_name == 'Meeker'                 # note no self here on person or assert
         assert student.first_name == 'Daniel'
@@ -24,3 +23,7 @@ class MyTestCase(unittest.TestCase):
 
     def test_student_str(self):
         self.assertEqual(str(self.student), 'Meeker, Daniel has major BIS-OOP with gpa: 3.9')
+
+    def test_obect_not_created_error_last_name(self):
+        with self.assertRaises(ValueError):
+            p = s.Student('123', 'Daniel', 'BIS-OOP')
