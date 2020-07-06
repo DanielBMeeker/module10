@@ -24,6 +24,14 @@ class MyTestCase(unittest.TestCase):
     def test_student_str(self):
         self.assertEqual(str(self.student), 'Meeker, Daniel has major BIS-OOP with gpa: 3.9')
 
-    def test_obect_not_created_error_last_name(self):
+    def test_object_not_created_error_last_name(self):
         with self.assertRaises(ValueError):
             p = s.Student('123', 'Daniel', 'BIS-OOP')
+
+    def test_object_not_created_error_fist_name(self):
+        with self.assertRaises(ValueError):
+            p = s.Student('Meeker', '123', 'BIS-OOP')
+
+    def test_object_not_created_error_in_major(self):
+        with self.assertRaises(ValueError):
+            p = s.Student('Meeker', 'Daniel', 'Yoga')
