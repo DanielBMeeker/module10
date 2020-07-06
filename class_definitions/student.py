@@ -2,7 +2,10 @@ class Student:
     """Student class"""
     def __init__(self, lname, fname, major, gpa=0.0):
         name_characters = set("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'-")
+        majors = ('BIS-OOP', 'CIS', 'Web Development', 'Network Security')
         if not (name_characters.issuperset(lname) and name_characters.issuperset(fname)):
+            raise ValueError
+        if major not in majors:
             raise ValueError
         self.last_name = lname
         self.first_name = fname
