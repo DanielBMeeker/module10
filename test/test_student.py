@@ -35,3 +35,7 @@ class MyTestCase(unittest.TestCase):
     def test_object_not_created_error_in_major(self):
         with self.assertRaises(ValueError):
             p = s.Student('Meeker', 'Daniel', 'Yoga')
+
+    def test_object_not_created_error_in_gpa(self):
+        with self.assertRaises(ValueError):
+            p = s.Student('Meeker', 'Daniel', 'CIS', 5.0)
