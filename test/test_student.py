@@ -38,4 +38,8 @@ class MyTestCase(unittest.TestCase):
 
     def test_object_not_created_error_in_gpa(self):
         with self.assertRaises(ValueError):
-            p = s.Student('Meeker', 'Daniel', 'CIS', 5.0)
+            p = s.Student('Meeker', 'Daniel', 'CIS', 5.0)  # out of range
+            d = s.Student('Meeker', 'Daniel', 'CIS', 2)  # int not float
+            q = s.Student('Meeker', 'Daniel', 'CIS', 'Four Point O')  # not a float
+
+
