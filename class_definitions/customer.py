@@ -36,8 +36,8 @@ class Customer:
         overrides built-in function
         :return: a basic string to identify the object
         """
-        return ("Customer with first name {self.first_name}, last name {self.last_name}, "
-                "and Customer ID {self.customer_id}".format(self=self))
+        return ("Customer #{self.customer_id}: {self.last_name}, {self.first_name}\n"
+                "{self.phone_number} \n{self.address} ".format(self=self))
 
     def __repr__(self):
         """
@@ -62,20 +62,21 @@ class Customer:
 
 
 # Driver
-print("Customer 1:")
-customer1 = Customer(12345, 'Meeker', 'Daniel', '515-555-5555', '123 Fake St, Des Moines, Iowa')
-print(customer1.display())
-print(customer1)
-print(repr(customer1))
-del customer1
-print('')
-try:
-    print("Customer 2:")
-    customer2 = Customer('Member', 'Meeker', 'Daniel', '515-555-5555', '123 Real St, Des Moines, Iowa')
-    print(customer2.display())
-    print(customer2)
-    print(repr(customer2))
-    del customer2
-except AttributeError as e:
-    print(e)
+if __name__ == '__main__':
+    print("Customer 1:")
+    customer1 = Customer(12345, 'Meeker', 'Daniel', '515-555-5555', '123 Fake St, Des Moines, Iowa')
+    print(customer1.display())
+    print(customer1)
+    print(repr(customer1))
+    del customer1
+    print('')
+    try:
+        print("Customer 2:")
+        customer2 = Customer('Member', 'Meeker', 'Daniel', '515-555-5555', '123 Real St, Des Moines, Iowa')
+        print(customer2.display())
+        print(customer2)
+        print(repr(customer2))
+        del customer2
+    except AttributeError as e:
+        print(e)
 
